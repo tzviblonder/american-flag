@@ -1,0 +1,29 @@
+.red-lines {
+    width: 1520px;
+    height: 804px;
+}
+
+.red-line {
+    background: #B31942;
+    height: 67px;
+    margin-bottom: 67px;
+}
+
+.bottom-line {
+    background: #B31942;
+    height: 67px;
+}
+
+.blue-square {
+    background: #0A3161;
+    height: 469px;
+    width: 608px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+}

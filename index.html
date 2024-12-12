@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="red-lines">
+      <div class="red-line"></div>
+      <div class="red-line"></div>
+      <div class="red-line"></div>
+      <div class="red-line"></div>
+      <div class="red-line"></div>
+      <div class="red-line"></div>
+      <div class="bottom-line"></div>
+    </div>
+    <div class="blue-square" id="image-gallery"></div>
+    <script>
+      for (i = 0; i < 9; i++) {
+
+        const imageCount = i % 2 === 0 ? 6 : 5;
+        const lineBreak = document.createElement('br');
+        const starDim = '44px'
+        const topMargin = i == 0 ? '17px' : '0px';
+        const bottomMargin = i == 8 ? '10px' : '0px'; 
+        
+        for (j = 0; j < imageCount; j++) {
+          const imageGallery = document.getElementById('image-gallery');
+          const img = document.createElement('img');
+          const marginLeft = (i%2==1) && (j == 0) ? '80px' : '32px';
+
+          img.src = 'star.jpg';
+          img.style.width = starDim;
+          img.style.height = starDim;
+          img.style.marginTop = topMargin;
+          img.style.marginBottom = bottomMargin;
+          img.style.marginLeft = marginLeft;
+          img.style.marginRight = '22px';
+          img.style.padding = '0';
+          imageGallery.appendChild(img);
+          if (j == imageCount - 1) {
+            imageGallery.appendChild(lineBreak);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
